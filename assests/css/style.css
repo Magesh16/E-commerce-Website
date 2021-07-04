@@ -1,4 +1,6 @@
 *{
     scroll-behavior: smooth;
    }
-   
+.list-group .list-group-item{
+    background-color: rgb(55, 185, 164);
+}
