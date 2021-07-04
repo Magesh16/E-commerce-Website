@@ -136,7 +136,7 @@ shrink-to-fit=no"
         <div class="row" >
           <div class="col-md-8 col-10 mx-auto mb-3 my-5 py-5 border shadow" style="background:linear-gradient(to right, rgb(224, 109, 89), rgb(66, 117, 109)) ;">
             <h3 class="text-center mb-3">Form</h3>
-            <form action="contact.html" method="POST" id="form">
+            <form action="contact.html" method="POST" id="form" onsubmit="return formValidation();">
               <div class="form-group">
                 <label>Name</label>
                 <input
@@ -275,3 +275,38 @@ shrink-to-fit=no"
     ></script>
   </body>
 </html>
+
+<script>
+
+    //form validation with javascript
+    function formValidation(){
+        //Get Value
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var msg = document.getElementById('msg').value.trim();
+
+        var isValidForm = true;       
+
+        //Validation Conditions here
+        if (name.length < 1) {
+            alert("Name is Required!");
+            var isValidForm = false;
+        }       
+        else if (email.length < 1) {
+            alert("Email is Required!");
+            var isValidForm = false;
+        } 
+        else if (msg.length < 1) {
+            alert("Message is Required!");
+            var isValidForm = false;
+        }
+        else
+        {
+            isValidForm = true;
+        }
+
+        return isValidForm;  //if isValidForm is true then form submits else submission is stopped
+        
+    }
+
+    </script>
