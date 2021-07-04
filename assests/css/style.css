@@ -4,3 +4,8 @@
 .list-group .list-group-item{
     background-color: rgb(55, 185, 164);
 }
+
+.carousel-indicators li{
+    width: auto !important;
+    height: auto !important;
+}
